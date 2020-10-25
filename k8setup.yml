@@ -1,0 +1,19 @@
+- name: Install Kubernetes
+  hosts: kubernetes
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  roles:
+    - awscli
+    - k8s
+    - kops
+    - kubectl
+ 
+#- name: Install MySQL
+#  hosts: db
+#  remote_user: ubuntu
+#  become: yes
+#  become_method: sudo
+#  roles:
+#    - mysql
+
